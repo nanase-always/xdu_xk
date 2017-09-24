@@ -9,6 +9,9 @@ import time
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
+import ssl
+ssl._create_default_https_context=ssl._create_unverified_context
+
 wd = webdriver.Chrome()
 wd.get("http://ids.xidian.edu.cn/authserver/login?service=http%3A%2F%2Fjwxt.xidian.edu.cn%2Fcaslogin.jsp")
 wd.maximize_window()
