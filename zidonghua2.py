@@ -34,9 +34,9 @@ def check_is_curruntwindow():
     wd.switch_to_frame("mainFrame")
 try:
     email = WebDriverWait(wd,timeout=10).until(EC.presence_of_element_located((By.ID,'username')),message=u'元素加载超时!')
-    email.send_keys("16010410023")
+    email.send_keys("")
     passwd = WebDriverWait(wd,timeout=10).until(EC.presence_of_element_located((By.ID,'password')),message=u'元素加载超时!')
-    passwd.send_keys("057815")
+    passwd.send_keys("")
     wd.find_element_by_name("submit").click()
     path=".//*[@id='divCoHome']/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr[3]/td[1]/a/div"
     if False == isElementExist(wd, path, "xpath"):
